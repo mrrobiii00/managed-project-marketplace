@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.local
+
+# env — نمونه‌ی بدون secret در .env.example نگهداری می‌شود
+.env
+.env.*
+
+!.env.example
+
+# logs / editor
+npm-debug.log*
+.vscode

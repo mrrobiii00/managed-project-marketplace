@@ -1,0 +1,45 @@
+{
+  "name": "managed-project-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Managed Software Project Marketplace — MVP (Persian, RTL-first)",
+  "scripts": {
+    "db:format": "prisma format",
+    "db:validate": "prisma validate",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:status": "prisma migrate status",
+    "db:deploy": "prisma migrate deploy",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "db:check": "tsx scripts/db-check.ts",
+    "dev": "tsx watch backend/src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:seed:demo": "tsx scripts/demo-seed.ts",
+    "db:seed:demo:clean": "tsx scripts/demo-clean.ts",
+    "test:unit": "tsx backend/tests/matching-engine.test.ts && tsx backend/tests/task-rules.test.ts && tsx backend/tests/rating-rules.test.ts",
+    "test:integration": "bash scripts/m10-tests.sh"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "argon2": "^0.45.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.4.1",
+    "prisma": "^6.19.3",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}

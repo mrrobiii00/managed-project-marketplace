@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Build artifacts
+dist/
+build/
+out/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Prisma
+prisma/*.db
